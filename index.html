@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/b50de18232.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Weather Forecast</h1>
+            <h2 id="typed-city" class="card-title">Edmonton</h2>
+            <h3 class="todaysdate">Friday, Oct 28</h3>
+            <h4 class="timenow">12:00</h4>
+          </div>
+        </div>
+        <form id="city-form">
+          <span class="col-sm-6">
+            <input
+              type="text"
+              placeholder="Search city"
+              id="city-search"
+              autocomplete="on"
+              autofocus="off"
+              class="city-search"
+            />
+            <button>
+              <i
+                class="fa-solid fa-magnifying-glass-location search-button"
+              ></i>
+            </button>
+          </span>
+        </form>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="temp" id="current-temperature">
+              <span id="current-temperature">12</span>
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a>|
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+            <br />
+            <img src="images/sunny.svg" alt="sunny-icon" />
+            <p>
+              <span class="forecast-temperature-max" id="maximum-temperature"
+                >Max: 12°
+              </span>
+              <span class="forecast-temperature-min" id="minimum-temperature"
+                >Min: 1°</span
+              >
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="description" id="temperature-description">
+              Mostly sunny
+            </div>
+            <div class="cloud-coverage" id="feels-like">
+              Feels like: 25 &deg
+            </div>
+            <div class="humidity" id="current-humidity">Humidity: 44%</div>
+            <div class="wind" id="current-wind">Wind: 19km/h</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Five day forecast</p>
+      <div class="row">
+        <div class="col">
+          <label for="text"> Monday </label>
+
+          <div class="card h-100" style="width: 5rem">
+            <div class="card-body">
+              <h5>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">12° </span>
+                  <span class="forecast-temperature-low">1°</span>
+                </div>
+              </h5>
+              <img src="images/sunny.svg" alt="sunny-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Tuesday
+          <div class="card h-100" style="width: 5rem">
+            <div class="card-body">
+              <h5>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">10° </span>
+                  <span class="forecast-temperature-low">1°</span>
+                </div>
+              </h5>
+              <img src="images/sunny.svg" alt="sunny-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Wednesday
+          <div class="card h-100" style="width: 5rem">
+            <div class="card-body">
+              <h5>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">5° </span>
+                  <span class="forecast-temperature-low">0°</span>
+                </div>
+              </h5>
+              <img src="images/partly-cloudy.svg" alt="sunny-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Thursday
+          <div class="card h-100" style="width: 5rem">
+            <div class="card-body">
+              <h5>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">3° </span>
+                  <span class="forecast-temperature-low">-1°</span>
+                </div>
+              </h5>
+              <img src="images/cloudy-snowing.svg" alt="sunny-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Friday
+          <div class="card h-100" style="width: 5rem">
+            <div class="card-body">
+              <h5>
+                <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">2°</span>
+                  <span class="forecast-temperature-low">-2°</span>
+                </div>
+              </h5>
+              <img src="images/cloudy-snowing.svg" alt="sunny-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <footer>
+      <a
+        href="https://www.shecodes.io/graduates/54992-makhosazana-aghoghovwia"
+        target="_blank"
+        >Open source code by</a
+      >Makhosazana Aghoghovwia
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

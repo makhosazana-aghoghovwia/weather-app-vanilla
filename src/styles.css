@@ -1,0 +1,107 @@
+.weather-app {
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+h1 {
+  color: rgb(16, 180, 205);
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin-top: 50px;
+  max-width: 600px;
+  padding: 95px 0;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-image: url(https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1675&q=80);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.card {
+  width: 120px;
+  line-height: 200px;
+}
+
+.city-search {
+  border-radius: 40px;
+  padding: 10px;
+}
+
+button {
+  border-radius: 60%;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.search-button {
+  color: rgb(16, 180, 205);
+}
+
+.temp {
+  line-height: 1px;
+  font-size: 28px;
+  text-align: center;
+  color: rgb(16, 180, 205);
+  text-decoration: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.forecast-temperature-max {
+  font-weight: bold;
+  color: green;
+  padding: 100px;
+}
+
+.forecast-temperature-min {
+  font-weight: bold;
+  color: blue;
+  padding: 100px;
+}
+
+form {
+  position: relative;
+  left: 300px;
+  bottom: 45px;
+}
+
+.forecast-temperature {
+  margin-top: -2;
+}
+.forecast-temperature-high {
+  font-weight: bold;
+  color: green;
+}
+
+.forecast-temperature-low {
+  font-weight: bold;
+  color: blue;
+}
+
+p {
+  font-weight: bold;
+}
+
+footer {
+  font-family: monospace;
+  color: #fff;
+}
+
+.units {
+  color: rgb(16, 180, 205);
+  text-decoration: none;
+}
