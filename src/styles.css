@@ -1,19 +1,14 @@
-.weather-app {
-  border: 1px;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #ffffff;
-}
-
 h1 {
   color: rgb(16, 180, 205);
   font-size: 28px;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 0;
 }
 
 body {
   margin-top: 50px;
   max-width: 600px;
+
   padding: 95px 0;
   display: block;
   margin: 0 auto;
@@ -24,6 +19,41 @@ body {
   background-position: center center;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 60%;
+  line-height: 20px;
+  padding: 10px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  position: relative;
+  left: 300px;
+  bottom: 45px;
+}
+
+p {
+  font-weight: bold;
+}
+
+small {
+  font-family: monospace;
+}
+
+.weather-app {
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff;
 }
 
 .card {
@@ -33,12 +63,6 @@ body {
 
 .city-search {
   border-radius: 40px;
-  padding: 10px;
-}
-
-button {
-  border-radius: 60%;
-  line-height: 20px;
   padding: 10px;
 }
 
@@ -54,13 +78,6 @@ button {
   text-decoration: none;
 }
 
-img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-}
-
 .forecast-temperature-max {
   font-weight: bold;
   color: green;
@@ -71,12 +88,6 @@ img {
   font-weight: bold;
   color: blue;
   padding: 100px;
-}
-
-form {
-  position: relative;
-  left: 300px;
-  bottom: 45px;
 }
 
 .forecast-temperature {
@@ -92,16 +103,15 @@ form {
   color: blue;
 }
 
-p {
-  font-weight: bold;
-}
-
-footer {
-  font-family: monospace;
-  color: #fff;
-}
-
 .units {
   color: rgb(16, 180, 205);
   text-decoration: none;
+}
+
+.coder {
+  background-color: #ffffff;
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  max-width: 590px;
 }
