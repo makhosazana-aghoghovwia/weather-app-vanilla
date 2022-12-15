@@ -74,6 +74,10 @@ small {
   margin-top: -20px;
 }
 
+.description-list:first-letter {
+  text-transform: capitalize;
+}
+
 .row {
   margin-top: -10px;
 }
@@ -127,4 +131,7 @@ small {
   border-radius: 5px;
   padding: 5px;
   max-width: 590px;
+}
+.wind-unit {
+  text-transform: lowercase;
 }
