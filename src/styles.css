@@ -70,6 +70,14 @@ small {
   color: rgb(16, 180, 205);
 }
 
+.description-list {
+  margin-top: -20px;
+}
+
+.row {
+  margin-top: -10px;
+}
+
 .temp {
   line-height: 1px;
   font-size: 28px;
@@ -103,8 +111,13 @@ small {
   color: blue;
 }
 
-.units {
+.temp .units {
   color: rgb(16, 180, 205);
+  text-decoration: none;
+  position: relative;
+  top: -9px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
 
