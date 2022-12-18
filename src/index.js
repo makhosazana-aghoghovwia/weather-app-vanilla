@@ -39,6 +39,8 @@ function searchCity(typedCity) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+searchCity("Edmonton");
+
 function showTemperature(response) {
   let typedCity = document.querySelector("#typed-city");
   let temperatureElement = document.querySelector("#current-temperature");
