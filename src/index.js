@@ -39,8 +39,6 @@ function searchCity(typedCity) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-searchCity("Edmonton");
-
 function showTemperature(response) {
   let typedCity = document.querySelector("#typed-city");
   let temperatureElement = document.querySelector("#current-temperature");
@@ -53,8 +51,10 @@ function showTemperature(response) {
   let timeElement = document.querySelector("#current-time");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   typedCity.innerHTML = response.data.name;
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)} &degC`;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidityElement.innerHTML = `Humidity: ${Math.round(
     response.data.main.humidity
   )}%`;
@@ -78,17 +78,22 @@ function showTemperature(response) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = 23;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("Edmonton");
