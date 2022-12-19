@@ -23,22 +23,6 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
-function showNewCity(event) {
-  event.preventDefault();
-  let typedCity = document.querySelector("#city-search").value;
-  searchCity(typedCity);
-}
-
-let cityForm = document.querySelector("#city-form");
-cityForm.addEventListener("submit", showNewCity);
-
-function searchCity(typedCity) {
-  let apiKey = "e6c2364656962bdcb16bc352fc42569a";
-
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${typedCity}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-}
-
 function showTemperature(response) {
   let typedCity = document.querySelector("#typed-city");
   let temperatureElement = document.querySelector("#current-temperature");
@@ -95,5 +79,21 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+function searchCity(typedCity) {
+  let apiKey = "e6c2364656962bdcb16bc352fc42569a";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${typedCity}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showNewCity(event) {
+  event.preventDefault();
+  let typedCity = document.querySelector("#city-search");
+  searchCity(typedCity.value);
+}
+
+let cityForm = document.querySelector("#city-form");
+cityForm.addEventListener("submit", showNewCity);
 
 searchCity("Edmonton");

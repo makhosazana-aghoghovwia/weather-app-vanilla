@@ -29,8 +29,8 @@ button {
 }
 
 img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: block;
   margin: 0 auto;
 }
@@ -115,14 +115,12 @@ small {
   color: blue;
 }
 
-.temp .units {
+.units {
   color: rgb(16, 180, 205);
-  text-decoration: none;
   position: relative;
   top: -9px;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
-  text-decoration: none;
 }
 
 .coder {
@@ -131,7 +129,4 @@ small {
   border-radius: 5px;
   padding: 5px;
   max-width: 590px;
-}
-.wind-unit {
-  text-transform: lowercase;
 }
