@@ -23,6 +23,31 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+  <div class="weather-forecast-date">${day}</div>
+  <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="42" />
+
+  <div class="forecast-temperature">
+                  <span class="forecast-temperature-high">12° </span>
+                  <span class="forecast-temperature-low">1°</span>
+                </div>
+                </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastElement;
+}
+
 function showTemperature(response) {
   let typedCity = document.querySelector("#typed-city");
   let temperatureElement = document.querySelector("#current-temperature");
@@ -97,3 +122,4 @@ let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", showNewCity);
 
 searchCity("Edmonton");
+displayForecast();
