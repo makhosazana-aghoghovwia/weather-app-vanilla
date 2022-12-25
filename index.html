@@ -36,8 +36,7 @@
           <div class="col-sm-6">
             <h1>Weather Forecast</h1>
             <h2 id="typed-city" class="card-title">Edmonton</h2>
-            <h3 class="todaysdate">Dec 19, 2022</h3>
-            <h4 class="timenow" id="current-time">12:00</h4>
+            <h4>Last updated: <span id="current-time"></span></h4>
           </div>
         </div>
         <form id="city-form">
@@ -69,37 +68,24 @@
             </div>
             <br />
             <img src="images/sunny.svg" alt="sunny-icon" id="icon" />
-            <p>
-              <span class="forecast-temperature-max" id="maximum-temperature"
-                >Max: 12°
-              </span>
-              <span class="forecast-temperature-min" id="minimum-temperature"
-                >Min: 1°</span
-              >
-            </p>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="description-list">
-              <div class="description" id="temperature-description">
-                Mostly sunny
-              </div>
-              <div class="cloud-coverage" id="feels-like">
-                Feels like: 25 &degC
-              </div>
-              <div class="humidity" id="current-humidity">Humidity: 44%</div>
-              <div class="wind" id="current-wind">Wind: 19km/h</div>
-            </div>
           </div>
         </div>
-      </div>
 
-      <div class="weather-forecast" id="forecast">Five day forecast</div>
-      
-        
-          
-           
-            
+        <div class="col-sm-6">
+          <div class="description-list">
+            <ul>
+              <li><span id="temperature-description"></span></li>
+              <li>Feels like: <span id="feels-like"></span>°C</li>
+              <li>Humidity: <span id="current-humidity"></span>%</li>
+              <li>Wind speed: <span id="current-wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast">Five day forecast</div>
+      </div>
+    </div>
+
     <br />
     <br />
 

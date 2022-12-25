@@ -64,18 +64,10 @@ function showTemperature(response) {
 
   typedCity.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  humidityElement.innerHTML = `Humidity: ${Math.round(
-    response.data.main.humidity
-  )}%`;
-  windElement.innerHTML = `Wind speed: ${Math.round(
-    response.data.wind.speed
-  )}km/h`;
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   description.innerHTML = response.data.weather[0].description;
-  feelings.innerHTML = `Feels like: ${Math.round(
-    response.data.main.feels_like
-  )}&degC`;
-  maxTemp.innerHTML = `Max: ${Math.round(response.data.main.temp_max)}&degC`;
-  minTemp.innerHTML = `Min: ${Math.round(response.data.main.temp_min)}&degC`;
+  feelings.innerHTML = Math.round(response.data.main.feels_like);
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
