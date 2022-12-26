@@ -99,13 +99,6 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
@@ -129,9 +122,6 @@ let celsiusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", showNewCity);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);

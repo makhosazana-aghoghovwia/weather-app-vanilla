@@ -77,7 +77,9 @@ small {
 }
 
 .description-list {
-  margin-top: -20px;
+  margin-top: -43px;
+  position: absolute;
+  right: 525px;
 }
 
 .description-list:first-letter {
@@ -140,4 +142,9 @@ small {
 
 .weather-forecast {
   text-align: center;
+}
+
+.combine {
+  display: flex;
+  flex-direction: row;
 }
