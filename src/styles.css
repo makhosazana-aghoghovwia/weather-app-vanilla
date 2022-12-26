@@ -133,3 +133,7 @@ small {
   padding: 5px;
   max-width: 590px;
 }
+
+.weather-forecast {
+  text-align: center;
+}
