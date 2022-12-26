@@ -126,4 +126,4 @@ cityForm.addEventListener("submit", showNewCity);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-searchCity("Edmonton");
+searchCity("Cape Town");
