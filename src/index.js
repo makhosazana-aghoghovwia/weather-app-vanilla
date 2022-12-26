@@ -84,7 +84,7 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   typedCity.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}&degC`;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   description.innerHTML = response.data.weather[0].description;
