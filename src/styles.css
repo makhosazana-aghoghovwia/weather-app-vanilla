@@ -1,8 +1,9 @@
 h1 {
   color: rgb(16, 180, 205);
-  font-size: 28px;
+  font-size: 30px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 body {
@@ -32,10 +33,11 @@ button {
 }
 
 img {
-  width: 60px;
-  height: 60px;
+  width: 85px;
+  height: 85px;
   display: block;
   margin: 0 auto;
+  margin-top: 0;
 }
 
 form {
@@ -67,6 +69,7 @@ small {
 .city-search {
   border-radius: 40px;
   padding: 10px;
+  margin-bottom: 0;
 }
 
 .search-button {
@@ -91,6 +94,7 @@ small {
   text-align: center;
   color: rgb(16, 180, 205);
   text-decoration: none;
+  margin-top: -5px;
 }
 
 .forecast-temperature-max {
@@ -131,7 +135,7 @@ small {
   border: 1px;
   border-radius: 5px;
   padding: 5px;
-  max-width: 590px;
+  max-width: 600px;
 }
 
 .weather-forecast {
