@@ -20,13 +20,13 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
 
-  return `${day}, ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
@@ -45,7 +45,7 @@ function displayForecast() {
   });
 
   forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastElement;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showTemperature(response) {
@@ -89,14 +89,6 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 function searchCity(typedCity) {
   let apiKey = "e6c2364656962bdcb16bc352fc42569a";
 
@@ -110,8 +102,16 @@ function showNewCity(event) {
   searchCity(typedCity.value);
 }
 
+let celsiusTemperature = null;
+
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", showNewCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Edmonton");
 displayForecast();
