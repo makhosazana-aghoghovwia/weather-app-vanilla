@@ -126,8 +126,6 @@ small {
 
 .units {
   color: rgb(16, 180, 205);
-  position: relative;
-  top: -9px;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
